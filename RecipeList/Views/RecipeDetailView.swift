@@ -15,8 +15,8 @@ struct RecipeDetailView: View {
                 Image(recipe.image).resizable().scaledToFit()
                 VStack(alignment: .leading) {
                     Text("Ingredients").font(.headline).padding([.bottom, .top], 5)
-                    ForEach(recipe.ingredients, id:\.self){ item in
-                        Text("➢ " + item).padding(1)
+                    ForEach(recipe.ingredients){ item in
+                        Text("➢ " + item.name).padding(1)
                     }
                 }.padding([.leading, .trailing], 10)
                 Divider()
